@@ -31,8 +31,12 @@
         .FruitBasket {
             z-index: 6;
             position: absolute;
-            bottom: 2vh;
+            bottom: 0;
             animation-duration: 3s;
+            vertical-align: bottom;
+        }
+        .FruitBasket img{
+            vertical-align: bottom;
         }
 
         .moon {
@@ -274,6 +278,15 @@
 
 </div>
 <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+<script>
+    ///rem格式化页面尺寸
+    $(window).resize(function () {
+        $('html').css('font-size', $(window).width() / 7.2 + 'px');
+    });
+
+    $('html').css('font-size', $(window).width() / 7.2 + 'px');
+</script>
+
 <script type="text/javascript">
     $('.hint,.greetingCards').click(function () {
         /*$('.hint,.greetingCards').addClass('fadeOut');*/
