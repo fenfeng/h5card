@@ -1,0 +1,241 @@
+img {
+    max-width: 100%;
+    max-height: 100%
+}
+
+.bg {
+    background: url('../img/bg.jpg') no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+}
+
+.FruitBasket {
+    z-index: 6;
+    position: absolute;
+    bottom: 0;
+    animation-duration: 3s;
+    vertical-align: bottom;
+}
+
+.FruitBasket img {
+    vertical-align: bottom;
+}
+
+.moon {
+    position: absolute;
+    top: -14vh;
+    animation: down 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes down {
+    0% {
+        transform: translateY(-20vh);
+    }
+    100% {
+        transform: translateY(13vh);
+    }
+}
+
+.cake {
+    position: absolute;
+    width: 46vw;
+}
+
+.MoonCake1 {
+    z-index: 2;
+    top: -30vh;
+    left: 30vw;
+    animation: cakeDown1 3.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+}
+
+.MoonCake2 {
+    z-index: 1;
+    top: -30vh;
+    left: 20vw;
+    animation: cakeDown2 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+}
+
+.MoonCake3 {
+    z-index: 3;
+    top: -30vh;
+    left: 15vw;
+    animation: cakeDown3 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+.MoonCake4 {
+    z-index: 3;
+    top: -30vh;
+    left: 35vw;
+    animation: cakeDown4 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+.MoonCake5 {
+    z-index: 3;
+    top: -30vh;
+    right: 20vw;
+    animation: cakeDown5 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+}
+
+.MoonCake6 {
+    z-index: 3;
+    top: -30vh;
+    right: 30vw;
+    animation: cakeDown6 3.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+}
+
+.greetingCards {
+    z-index: 2;
+    width: 60vw;
+    top: -55vh;
+    left: 25vw;
+    animation: greetdown 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+}
+
+@keyframes greetdown {
+    0% {
+        transform: translateY(-45vh);
+    }
+    100% {
+        transform: translateY(78vh);
+    }
+}
+
+@keyframes cakeDown1 {
+    0% {
+        transform: translateX(5vw) translateY(-25vh)
+    }
+    100% {
+        transform: translateX(-50vw) translateY(82vh)
+    }
+}
+
+@keyframes cakeDown2 {
+    0% {
+        transform: translateX(5vw) translateY(-25vh)
+    }
+    100% {
+        transform: translateX(-20vw) translateY(75vh)
+    }
+}
+
+@keyframes cakeDown3 {
+    0% {
+        transform: translateX(5vw) translateY(-25vh)
+    }
+    100% {
+        transform: translateX(8vw) translateY(80vh)
+    }
+}
+
+@keyframes cakeDown4 {
+    0% {
+        transform: translateX(5vw) translateY(-25vh)
+    }
+    100% {
+        transform: translateX(3vw) translateY(78vh)
+    }
+}
+
+@keyframes cakeDown5 {
+    0% {
+        transform: translateX(5vw) translateY(-25vh)
+    }
+    100% {
+        transform: translateX(20vw) translateY(75vh)
+    }
+}
+
+@keyframes cakeDown6 {
+    0% {
+        transform: translateX(5vw) translateY(-25vh)
+    }
+    100% {
+        transform: translateX(50vw) translateY(80vh)
+    }
+}
+
+.hint {
+    position: absolute;
+    top: 15vh;
+    left: 10vw;
+    width: 80vw;
+    opacity: 0;
+    animation-name: fade_in, fade_in_out;
+    animation-duration: 1s, 3s;
+    animation-delay: 8s, 8.5s;
+    animation-iteration-count: 1, infinite;
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0.4
+    }
+}
+
+@keyframes fade_in_out {
+    0% {
+        opacity: 0.4
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0.4
+    }
+}
+
+.GreetingCards3 {
+    display: block;
+    position: absolute;
+    width: 90vw;
+    top: 9%;
+    left: 5vw;
+    opacity: 0;
+}
+
+.GreetingCards3 .cards1 {
+    z-index: 3;
+    position: relative;
+    top: 0;
+    left:4%;
+    width: 320px;
+    height: 520px;
+}
+
+.GreetingCards3 .cards2 {
+    position: absolute;
+    top: 3%;
+    left: 10%;
+    width: 277.31px;
+    height: 489.29px;
+}
+
+.m-active {
+    display: block;
+}
+
+.m-out {
+    display: none;
+}

@@ -1,0 +1,372 @@
+img {
+    max-width: 100%;
+    max-height: 100%
+}
+
+.bg {
+    background: url('img/bg.jpg') no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.moon, .xiyingzhongqiu, .lantern1, .lantern2, .leaf1, .leaf2, .leaf3, .leaf4, .leaf5, .leaf6, .cloud1, .cloud2,
+.cloud3, .cloud4, .cloud5, .flower1, .flower2, .flower3 {
+    display: none;
+}
+
+.cakeBox {
+    z-index: 999;
+    margin: 0 auto;
+    margin-top: 28vh;
+    width: 80vw;
+    animation-duration: 2s;
+}
+
+.moon {
+    position: absolute;
+    width: 30vw;
+    left: 15%;
+    top: 13%;
+}
+
+.moonCake {
+    z-index: 998;
+    position: absolute;
+    width: 60vw;
+    left: 21%;
+    top: 33%;
+}
+
+.wenhouyu {
+    z-index: 999;
+    margin: 0 auto;
+    width: 70vw;
+}
+
+.print {
+    position: absolute;
+    width: 5vw;
+    left: 75%;
+    top: 34%;
+}
+
+.xiyingzhongqiu {
+    position: absolute;
+    width: 35vw;
+    top: 19%;
+    left: 6%;
+}
+
+.lantern1, .lantern2 {
+    width: 20vw;
+}
+
+.lantern1 {
+    z-index: 1;
+    position: absolute;
+    top: 30%;
+    left: 20.5%;
+}
+
+.lantern2 {
+    position: absolute;
+    top: 39%;
+    right: 76%;
+}
+
+.leaf1 {
+    z-index: 1;
+    position: absolute;
+    top: 61%;
+    left: 8%;
+    width: 13vw;
+}
+
+.leaf2 {
+    z-index: 1;
+    position: absolute;
+    top: 71%;
+    left: 1%;
+    width: 12vw;
+}
+
+.leaf3 {
+    z-index: 1;
+    position: absolute;
+    top: 77%;
+    left: 19%;
+    width: 19vw;
+}
+
+.leaf4 {
+    z-index: 1;
+    position: absolute;
+    top: 75%;
+    left: 45%;
+}
+
+.leaf5 {
+    z-index: 1;
+    position: absolute;
+    top: 72%;
+    left: 65%;
+}
+
+.leaf6 {
+    z-index: 1;
+    position: absolute;
+    top: 64%;
+    right: 0%;
+}
+
+.flower1 {
+    z-index: 2;
+    position: absolute;
+    top: 68%;
+    left: 28%;
+    width: 24vw;
+}
+
+.flower2 {
+    z-index: 4;
+    position: absolute;
+    top: 63%;
+    left: 51%;
+    width: 32vw;
+}
+
+.flower3 {
+    z-index: 2;
+    position: absolute;
+    top: 59%;
+    left: 69%;
+    width: 27vw;
+}
+
+.cloud1 {
+    position: absolute;
+    top: 68%;
+    left: 12%;
+    width: 27vw;
+}
+
+.cloud2 {
+    position: absolute;
+    top: 80%;
+    left: 24%;
+    width: 32vw;
+
+}
+
+.cloud3 {
+    z-index: 3;
+    position: absolute;
+    width: 39vw;
+    top: 65%;
+    left: 60%;
+}
+
+.cloud4 {
+    z-index: 1;
+    position: absolute;
+    top: 77%;
+    left: 16%;
+    width: 20vw;
+}
+
+.cloud5 {
+    position: absolute;
+    width: 22vw;
+    top: 75%;
+    right: 10%;
+}
+
+.m-active {
+    display: block;
+}
+
+.move {
+    animation: move 0.5s;
+    transform-origin: 100% 0%;
+}
+
+@keyframes move {
+    0% {
+        transform: scaleY(0);
+    }
+    60%, 90% {
+        transform: scaleY(0.9);
+    }
+    80% {
+        transform: scaleY(0.75);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@-webkit-keyframes move {
+    0% {
+        -webkit-transform: scaleY(0);
+    }
+    60%, 90% {
+        -webkit-transform: scaleY(0.9);
+    }
+    80% {
+        -webkit-transform: scaleY(0.75);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+    }
+}
+
+.moonMove {
+    animation: moonMove 2.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes moonMove {
+    0% {
+        transform: scale(1) translateX(0) translateY(0);
+    }
+    100% {
+        transform: scale(0.7) translateX(30vw) translateY(-30vh);
+    }
+}
+
+@-webkit-keyframes moonMove {
+    0% {
+        -webkit-transform: scale(1) translateX(0) translateY(0);
+    }
+    100% {
+        -webkit-transform: scale(0.7) translateX(30vw) translateY(-30vh);
+    }
+}
+
+.shake1 {
+    animation: shake1 5s infinite;
+}
+
+@keyframes shake1 {
+    0% {
+        transform: translateX(0vw) translateY(0vh);
+    }
+    50% {
+        transform: translateX(4vw) translateY(-1.5vh);
+    }
+    100% {
+        transform: translateX(0vw) translateY(0vh);
+    }
+}
+
+@-webkit-keyframes shake1 {
+    0% {
+        -webkit-transform: translateX(0vw) translateY(0vh);
+    }
+    50% {
+        -webkit-transform: translateX(4vw) translateY(-1.5vh);
+    }
+    100% {
+        -webkit-transform: translateX(0vw) translateY(0vh);
+    }
+}
+
+.shake2 {
+    animation: shake2 5s infinite;
+}
+
+@keyframes shake2 {
+    0% {
+        transform: translateX(0vw) translateY(0vh);
+    }
+    50% {
+        transform: translateX(1vw) translateY(-2vh);
+    }
+    100% {
+        transform: translateX(0vw) translateY(0vh);
+    }
+}
+
+@-webkit-keyframes shake2 {
+    0% {
+        -webkit-transform: translateX(0vw) translateY(0vh);
+    }
+    50% {
+        -webkit-transform: translateX(1vw) translateY(-2vh);
+    }
+    100% {
+        -webkit-transform: translateX(0vw) translateY(0vh);
+    }
+}
+
+.shake3 {
+    animation: shake3 5s infinite;
+}
+
+@keyframes shake3 {
+    0% {
+        transform: translateX(0vw) translateY(0vh);
+    }
+    50% {
+        transform: translateX(1vw) translateY(-0.5vh);
+    }
+    100% {
+        transform: translateX(0vw) translateY(0vh);
+    }
+}
+
+@-webkit-keyframes shake3 {
+    0% {
+        -webkit-transform: translateX(0vw) translateY(0vh);
+    }
+    50% {
+        -webkit-transform: translateX(1vw) translateY(-0.5vh);
+    }
+    100% {
+        -webkit-transform: translateX(0vw) translateY(0vh);
+    }
+}
+
+.Greetings {
+    display: none;
+    z-index: 999;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    width: 76vw;
+    opacity: 0.7;
+}
+
+.fade_in {
+    display: block;
+    animation: fade_in 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 0.4
+    }
+    100% {
+        opacity: 0.7
+    }
+}
+
+@-webkit-keyframes fade_in {
+    0% {
+        -webkit-opacity: 0
+    }
+    50% {
+        -webkit-opacity: 0.4
+    }
+    100% {
+        -webkit-opacity: 0.7
+    }
+}
