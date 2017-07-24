@@ -1,0 +1,12 @@
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.bg {
+    background: url('../img/bg.jpg');
+    background-position: center;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
