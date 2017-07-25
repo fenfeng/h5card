@@ -94,6 +94,9 @@
                 },3000);
                 break;
             case 3:
+                $('.shu').removeClass('fadeInLeft shuMove');
+                $('.shu').addClass('fadeOutLeft');
+                $('.jianzhi').addClass('fadeOutDown');
                 $('.kuang2,.zhufuyu2,.yinzhang2').addClass('animated fadeOut');
                 setTimeout(function () {
                     $('.kuang3,.zhufuyu3,.yinzhang3').addClass('animated fadeIn');
