@@ -1,12 +1,311 @@
 img {
-    max-height: 100%;
     max-width: 100%;
+    max-height: 100%;
 }
 
 .bg {
+    z-index: 1;
+    position: relative;
     background: url('../img/bg.jpg');
+    background-repeat: no-repeat;
     background-position: center;
-    background-position: center;
+    background-size: 100%;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+}
+
+.bg .tips_top {
+    z-index: 4;
+    position: absolute;
+    top: 14vh;
+    left: 10vw;
+    width: 80vw;
+}
+
+.bg .zhufu {
+    z-index: 3;
+    position: relative;
+    background-size: 100%;
+    width: 33vw;
+    height: 35vh;
+    margin: 20vh auto;
+}
+
+.zhufu_out {
+    display: none;
+}
+
+.bg .zhufu .kuang, .bg .zhufu .zhufuyu1, .bg .zhufu .zhufuyu2, .bg .zhufu .zhufuyu3, .bg .zhufu .zhufuyu4, .bg .zhufu .yinzhang1, .bg .zhufu .yinzhang2, .bg .zhufu .yinzhang3, .bg .zhufu .yinzhang4 {
+    position: absolute;
+}
+
+.bg .zhufu .kuang {
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+.bg .zhufu .zhufuyu1 {
+    top: 3vh;
+    left: 6vw;
+    width: 22vw;
+    height: 30vh;
+    animation-duration: 2s;
+}
+
+.bg .zhufu .zhufuyu2 {
+    top: 3vh;
+    left: 6vw;
+    width: 22vw;
+    height: 30vh;
+    animation-duration: 2s;
+}
+
+.bg .zhufu .zhufuyu3 {
+    top: 3vh;
+    left: 6vw;
+    width: 22vw;
+    height: 30vh;
+    animation-duration: 2s;
+}
+
+.bg .zhufu .zhufuyu4 {
+    top: 3vh;
+    left: 6vw;
+    width: 22vw;
+    height: 30vh;
+    animation-duration: 2s;
+}
+
+.bg .zhufu .yinzhang1 {
+    right: 5vw;
+    top: 17vh;
+    width: 6vw;
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+
+.bg .zhufu .yinzhang2 {
+    left: 4vw;
+    top: 10vh;
+    width: 6vw;
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+
+.bg .zhufu .yinzhang3 {
+    left: 3vw;
+    top: 19vh;
+    width: 6vw;
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+
+.bg .zhufu .yinzhang4 {
+    right: 2vw;
+    top: 6vh;
+    width: 6vw;
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+
+.cloud_left {
+    z-index: 4;
+    position: absolute;
+    top: 46vh;
+    left: 4vw;
+    width: 34vw;
+    animation-name: cloud_leftMove;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.cloud_right {
+    z-index: 4;
+    position: absolute;
+    top: 30vh;
+    right: 4vw;
+    width: 33vw;
+    animation-name: cloud_rightMove;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes cloud_leftMove {
+    0% {
+        left: 3vw;
+    }
+    100% {
+        left: 7vw
+    }
+}
+
+@keyframes cloud_rightMove {
+    0% {
+        right: 3vw;
+    }
+    100% {
+        right: 6.5vw
+    }
+}
+
+.jiantou {
+    z-index: 4;
+    position: absolute;
+    top: 56vh;
+    left: 40vw;
+    transform: scale(-1, 1);
+    width: 20vw;
+    animation-name: jiantouMove;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes jiantouMove {
+    0% {
+        left: 38vw
+    }
+    100% {
+        left: 42vw
+    }
+}
+
+.tips_bottom {
+    z-index: 4;
+    position: absolute;
+    top: 61vh;
+    left: 5vw;
+    width: 90vw;
+    animation-name: tips_bottomOpacity;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes tips_bottomOpacity {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.cake {
+    z-index: 5;
+    position: absolute;
+    bottom: -28vh;
+    left: 2.5vw;
+    width: 95vw;
+}
+
+.cake img {
+    width: 95vw;
+}
+
+@keyframes roateCake {
+
+}
+
+.jianzhi5 {
+    z-index: 2;
+    position: absolute;
+    left: -9vw;
+    bottom: 6vh;
+    width: 55vw;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+
+.jianzhi5_x {
+    z-index: 2;
+    position: absolute;
+    top: -3vh;
+    right: 1vw;
+    width: 38vw;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+}
+
+.jianzhi5_x img {
+    transform: scale(1, -1);
+}
+
+.jianzhi {
+    z-index: 2;
+    position: absolute;
+    bottom: 22vh;
+    right: -4vw;
+    width: 42vw;
+    animation-duration: 2s;
+}
+
+.bird {
+    z-index: 5;
+    position: absolute;
+    top: 21vh;
+    left: 8vw;
+    width: 29vw;
+    animation-name: fly;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes fly {
+    0% {
+        left: -25vw;
+        top: 15vh;
+    }
+    10% {
+        left: -19vw;
+        top: 18vh
+    }
+    100% {
+        left: 8vw;
+        top: 21vh
+    }
+}
+
+.bird2 {
+    z-index: 5;
+    position: absolute;
+    top: 51vh;
+    right: 13vw;
+    width: 20vw;
+    animation-name: fly2;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+.bird2 img {
+    transform: scale(-1, 1) rotate(-50deg);
+}
+
+@keyframes fly2 {
+    0% {
+        right: -19vw;
+        top: 60vh;
+    }
+    10% {
+        right: -15vw;
+        top: 58vh
+    }
+    100% {
+        right: 13vw;
+        top: 51vh
+    }
 }

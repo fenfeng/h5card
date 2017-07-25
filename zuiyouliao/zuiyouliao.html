@@ -1,22 +1,120 @@
 <html>
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta http-equiv="imagetoolbar" content="yes">
-        <meta http-equiv="content-type" content="text/html; charset=utf8">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
-        <link rel="stylesheet" type="text/css" href="../css/animate.min.css">
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="imagetoolbar" content="yes">
+    <meta http-equiv="content-type" content="text/html; charset=utf8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
+    <link rel="stylesheet" type="text/css" href="../css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-<div class="bg">
-
+<div class="contain">
+    <div class="bg">
+        <div class="tips_top">
+            <img src="img/tips(2).png" alt="">
+        </div>
+        <div class="zhufu">
+            <img class="kuang kuang1 animated fadeIn" src="img/kuang.png" alt="">
+            <img class="kuang kuang2 zhufu_out animated fadeIn" src="img/kuang.png" alt="">
+            <img class="kuang kuang3 zhufu_out animated fadeIn" src="img/kuang.png" alt="">
+            <img class="kuang kuang4 zhufu_out animated fadeIn" src="img/kuang.png" alt="">
+            <img class="zhufuyu1 animated fadeIn" src="img/zhufuyu(4).png" alt="">
+            <img class="yinzhang1 animated fadeIn" src="img/jiankang.png" alt="">
+            <img class="zhufuyu2 zhufu_out" src="img/zhufuyu(3).png" alt="">
+            <img class="yinzhang2 zhufu_out" src="img/caifu.png" alt="">
+            <img class="zhufuyu3 zhufu_out" src="img/zhufuyu(2).png" alt="">
+            <img class="yinzhang3 zhufu_out" src="img/fuqi.png" alt="">
+            <img class="zhufuyu4 zhufu_out" src="img/zhufuyu.png" alt="">
+            <img class="yinzhang4 zhufu_out" src="img/pingan.png" alt="">
+        </div>
+        <div class="cloud_left">
+            <img src="img/cloud(2).png" alt="">
+        </div>
+        <div class="cloud_right">
+            <img src="img/cloud.png" alt="">
+        </div>
+        <div class="jiantou">
+            <img src="img/jiantou.png" alt="">
+        </div>
+        <div class="tips_bottom">
+            <img src="img/tips.png" alt="">
+        </div>
+        <div class="cake" id="cake" onclick="rotateDIV();">
+            <img src="img/cake.png" alt="">
+        </div>
+        <div class="jianzhi5 animated fadeInUpBig">
+            <img src="img/jianzhi(5).png" alt="">
+        </div>
+        <div class="jianzhi5_x animated fadeInDownBig">
+            <img src="img/jianzhi(5).png" alt="">
+        </div>
+        <div class="jianzhi zhufu_out">
+            <img src="img/jianzhi.png" alt="">
+        </div>
+        <div class="bird">
+            <img src="img/niao.png" alt="">
+        </div>
+        <div class="bird2">
+            <img src="img/niao.png" alt="">
+        </div>
+    </div>
 </div>
 <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+<script>
+    var x, n = 0, rotINT, num = 1;
+    function rotateDIV() {
+        num = num + 1;
+        x = document.getElementById("cake");
+        clearInterval(rotINT);
+        rotINT = setInterval("startRotate()", 10);
+        switch (num) {
+            case 2:
+                $('.kuang1,.zhufuyu1,.yinzhang1').addClass('animated fadeOut');
+                $('.tips_bottom').addClass('zhufu_out');
+                $('.jianzhi5').addClass('animated fadeOutDown');
+                $('.jianzhi5_x').addClass('animated fadeOutUp');
+                setTimeout(function () {
+                    $('.kuang2,.zhufuyu2,.yinzhang2').addClass('animated fadeIn');
+                    $('.kuang2,.zhufuyu2,.yinzhang2').removeClass('zhufu_out');
+                    $('.jianzhi').addClass('animated fadeInUpBig');
+                    $('.jianzhi').removeClass('zhufu_out');
+                }, 2000);
+                break;
+            case 3:
+                $('.kuang2,.zhufuyu2,.yinzhang2').addClass('animated fadeOut');
+                setTimeout(function () {
+                    $('.kuang3,.zhufuyu3,.yinzhang3').addClass('animated fadeIn');
+                    $('.kuang3,.zhufuyu3,.yinzhang3').removeClass('zhufu_out');
+                }, 2000);
+                break;
+            case 4:
+                $('.kuang3,.zhufuyu3,.yinzhang3').addClass('animated fadeOut');
+                setTimeout(function () {
+                    $('.kuang4,.zhufuyu4,.yinzhang4').addClass('animated fadeIn');
+                    $('.kuang4,.zhufuyu4,.yinzhang4').removeClass('zhufu_out');
+                }, 2000);
+                break;
+        }
+    };
+    function startRotate() {
+        n = n + 1;
+        if (n <= 360) {
+            x.style.transform = "rotate(" + "-" + n + "deg)";
+            x.style.webkitTransform = "rotate(" + "-" + n + "deg)";
+            x.style.OTransform = "rotate(" + "-" + n + "deg)";
+            x.style.MozTransform = "rotate(" + "-" + n + "deg)";
+            if (n == 90 || n == 180 || n == 270 || n == 360) {
+                clearInterval(rotINT);
+            }
+        }
+    }
+</script>
+
 </body>
 </html>
