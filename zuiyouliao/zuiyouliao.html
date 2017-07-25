@@ -57,6 +57,9 @@
         <div class="jianzhi zhufu_out">
             <img src="img/jianzhi.png" alt="">
         </div>
+        <div class="shu zhufu_out">
+            <img src="img/shu.png" alt="">
+        </div>
         <div class="bird">
             <img src="img/niao.png" alt="">
         </div>
@@ -83,8 +86,12 @@
                     $('.kuang2,.zhufuyu2,.yinzhang2').addClass('animated fadeIn');
                     $('.kuang2,.zhufuyu2,.yinzhang2').removeClass('zhufu_out');
                     $('.jianzhi').addClass('animated fadeInUpBig');
-                    $('.jianzhi').removeClass('zhufu_out');
+                    $('.shu').addClass('animated fadeInLeft');
+                    $('.jianzhi,.shu').removeClass('zhufu_out');
                 }, 2000);
+                setTimeout(function () {
+                    $('.shu').addClass('shuMove');
+                },3000);
                 break;
             case 3:
                 $('.kuang2,.zhufuyu2,.yinzhang2').addClass('animated fadeOut');

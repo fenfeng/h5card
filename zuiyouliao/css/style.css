@@ -309,3 +309,28 @@ img {
         top: 51vh
     }
 }
+
+.shu {
+    position: absolute;
+    top: 10vh;
+    left: -7vw;
+    width: 58vw;
+}
+
+.shuMove{
+    transform-origin: 0 100%;
+    animation-name: shuMove;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes shuMove {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(5deg)
+    }
+}
