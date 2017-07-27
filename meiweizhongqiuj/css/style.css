@@ -101,6 +101,7 @@ img {
 }
 
 .greetingCards {
+    position: absolute;
     z-index: 2;
     width: 60vw;
     top: -55vh;
@@ -217,19 +218,17 @@ img {
 
 .GreetingCards3 .cards1 {
     z-index: 3;
-    position: relative;
+    position: absolute;
     top: 0;
-    left:4%;
-    width: 320px;
-    height: 520px;
+    left: 14.5vw;
+    width: 71vw;
 }
 
 .GreetingCards3 .cards2 {
     position: absolute;
-    top: 3%;
-    left: 10%;
-    width: 277.31px;
-    height: 489.29px;
+    top: 12px;
+    left: 19.5vw;
+    width: 61vw;
 }
 
 .m-active {

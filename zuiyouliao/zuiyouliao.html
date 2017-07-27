@@ -33,13 +33,13 @@
             <img class="zhufuyu4 zhufu_out" src="img/zhufuyu.png" alt="">
             <img class="yinzhang4 zhufu_out" src="img/pingan.png" alt="">
         </div>
-        <div class="cloud_left">
+        <div class="cloud_left cloud_leftMove">
             <img src="img/cloud(2).png" alt="">
         </div>
-        <div class="cloud_right">
+        <div class="cloud_right cloud_rightMove">
             <img src="img/cloud.png" alt="">
         </div>
-        <div class="jiantou">
+        <div class="jiantou jiantouMove">
             <img src="img/jiantou.png" alt="">
         </div>
         <div class="tips_bottom">
@@ -57,14 +57,40 @@
         <div class="jianzhi zhufu_out">
             <img src="img/jianzhi.png" alt="">
         </div>
+        <div class="jianzhi3 zhufu_out">
+            <img src="img/jianzhi(3).png" alt="">
+        </div>
+        <div class="jianzhi4 zhufu_out">
+            <img src="img/jianzhi(4).png" alt="">
+        </div>
+        <div class="jianzhi2 zhufu_out">
+            <img src="img/jianzhi(2).png" alt="">
+        </div>
+        <div class="jianzhi2_x zhufu_out">
+            <img src="img/jianzhi(2).png" alt="">
+        </div>
+        <div class="jianzhi6 zhufu_out">
+            <img src="img/jianzhi(6).png" alt="">
+        </div>
         <div class="shu zhufu_out">
             <img src="img/shu.png" alt="">
         </div>
-        <div class="bird">
+        <div class="bird fly">
             <img src="img/niao.png" alt="">
         </div>
-        <div class="bird2">
+        <div class="bird2 fly2">
             <img src="img/niao.png" alt="">
+        </div>
+        <div class="fish zhufu_out">
+            <img src="img/yu(2).png" alt="">
+        </div>
+        <div class="fish2 zhufu_out">
+            <img src="img/yu.png" alt="">
+        </div>
+        <div class="hua zhufu_out">
+            <img src="img/hua.png" alt="">
+        </div>
+        <div class="xinzhi zhufu_out">
         </div>
     </div>
 </div>
@@ -78,6 +104,10 @@
         rotINT = setInterval("startRotate()", 10);
         switch (num) {
             case 2:
+                $('.bird').removeClass('fly');
+                $(".bird2").removeClass('fly2');
+                $('.bird').addClass('flyOut');
+                $(".bird2").addClass('animated fadeOutLeftBig');
                 $('.kuang1,.zhufuyu1,.yinzhang1').addClass('animated fadeOut');
                 $('.tips_bottom').addClass('zhufu_out');
                 $('.jianzhi5').addClass('animated fadeOutDown');
@@ -99,16 +129,61 @@
                 $('.jianzhi').addClass('fadeOutDown');
                 $('.kuang2,.zhufuyu2,.yinzhang2').addClass('animated fadeOut');
                 setTimeout(function () {
+                    $('.fish,.fish2').removeClass('zhufu_out');
+                    $('.fish,.fish2').addClass('animated fadeIn');
+                    setTimeout(function () {
+                        $('.fish,.fish2').removeClass('animated fadeIn');
+                        $('.fish').addClass('fishMove');
+                        $('.fish2').addClass('fish2Move');
+                    },1000);
                     $('.kuang3,.zhufuyu3,.yinzhang3').addClass('animated fadeIn');
                     $('.kuang3,.zhufuyu3,.yinzhang3').removeClass('zhufu_out');
+                    $('.jianzhi3').addClass('animated fadeInDown');
+                    $('.jianzhi4').addClass('animated fadeInUp');
+                    $('.jianzhi3,.jianzhi4').removeClass('zhufu_out');
                 }, 2000);
                 break;
             case 4:
+                $('.jianzhi3').removeClass('fadeInDown');
+                $('.jianzhi4').removeClass('fadeInUp');
+                $('.jianzhi3').addClass('fadeOutUp');
+                $('.jianzhi4').addClass('fadeOutDown');
+                $('.fish').removeClass('fishMove');
+                $('.fish2').removeClass('fish2Move');
+                $('.fish').addClass('animated fadeOut');
+                $('.fish2').addClass('animated fadeOut');
                 $('.kuang3,.zhufuyu3,.yinzhang3').addClass('animated fadeOut');
                 setTimeout(function () {
+                    $('.jianzhi2,.jianzhi2_x').removeClass('zhufu_out');
+                    $('.jianzhi2').addClass('animated fadeInLeftBig');
+                    $('.jianzhi2_x').addClass('animated fadeInDownBig');
+                    $('.hua').addClass('animated fadeInUpBig');
+                    $('.hua').removeClass('zhufu_out');
+                    setTimeout(function () {
+                        $('.hua').removeClass('animated fadeInUpBig');
+                        $('.hua').addClass('huaMove');
+                    },2000);
                     $('.kuang4,.zhufuyu4,.yinzhang4').addClass('animated fadeIn');
                     $('.kuang4,.zhufuyu4,.yinzhang4').removeClass('zhufu_out');
                 }, 2000);
+                break;
+            case 5:
+                $('.jianzhi2').removeClass('animated fadeInLeftBig');
+                $('.jianzhi2_x').removeClass('animated fadeInUpBig');
+                $('.jianzhi2').addClass('animated fadeOutLeftBig');
+                $('.jianzhi2_x').addClass('animated fadeOutUpBig');
+                $('.hua').removeClass('huaMove');
+                $('.hua').addClass('animated fadeOutDownBig');
+                $('.zhufu').addClass('animated fadeOut');
+                $('.tips_top').addClass('animated fadeOut');
+                $('.jiantou').removeClass('jiantouMove');
+                $('.jiantou').addClass('animated fadeOut');
+                setTimeout(function () {
+                    $('.jianzhi6').addClass('animated fadeInDown');
+                    $('.jianzhi6').removeClass('zhufu_out');
+                    $('.xinzhi').addClass('animated fadeIn');
+                    $('.xinzhi').removeClass('zhufu_out');
+                },2000);
                 break;
         }
     };

@@ -118,6 +118,8 @@ img {
     top: 46vh;
     left: 4vw;
     width: 34vw;
+}
+.cloud_leftMove{
     animation-name: cloud_leftMove;
     animation-duration: 2s;
     animation-timing-function: linear;
@@ -125,13 +127,14 @@ img {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-
 .cloud_right {
     z-index: 4;
     position: absolute;
     top: 30vh;
     right: 4vw;
     width: 33vw;
+}
+.cloud_rightMove{
     animation-name: cloud_rightMove;
     animation-duration: 1.5s;
     animation-timing-function: linear;
@@ -139,7 +142,6 @@ img {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-
 @keyframes cloud_leftMove {
     0% {
         left: 3vw;
@@ -165,6 +167,8 @@ img {
     left: 40vw;
     transform: scale(-1, 1);
     width: 20vw;
+}
+.jiantouMove{
     animation-name: jiantouMove;
     animation-duration: 0.8s;
     animation-timing-function: linear;
@@ -172,7 +176,6 @@ img {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-
 @keyframes jiantouMove {
     0% {
         left: 38vw
@@ -260,6 +263,9 @@ img {
     top: 21vh;
     left: 8vw;
     width: 29vw;
+}
+
+.fly {
     animation-name: fly;
     animation-duration: 2s;
     animation-timing-function: ease-out;
@@ -280,12 +286,32 @@ img {
     }
 }
 
+.flyOut {
+    animation: flyOut 2s alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flyOut {
+    0% {
+        left: 8vw;
+        top: 21vh
+    }
+    100% {
+        left: 129vw;
+        top: 40vh
+    }
+}
+
 .bird2 {
     z-index: 5;
     position: absolute;
     top: 51vh;
     right: 13vw;
     width: 20vw;
+    animation-duration: 4s;
+}
+
+.fly2 {
     animation-name: fly2;
     animation-duration: 2s;
     animation-timing-function: ease-out;
@@ -317,7 +343,7 @@ img {
     width: 58vw;
 }
 
-.shuMove{
+.shuMove {
     transform-origin: 0 100%;
     animation-name: shuMove;
     animation-duration: 2s;
@@ -326,6 +352,7 @@ img {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
 @keyframes shuMove {
     0% {
         transform: rotate(0deg)
@@ -333,4 +360,99 @@ img {
     100% {
         transform: rotate(5deg)
     }
+}
+
+.jianzhi3 {
+    position: absolute;
+    top: -10vh;
+    left: -10vw;
+    width: 59vw;
+}
+
+.jianzhi4 {
+    position: absolute;
+    bottom: 15vh;
+    right: -5vw;
+    width: 49vw;
+}
+.jianzhi2{
+    position: absolute;
+    top: 35vh;
+    left: -16vw;
+    width: 55vw;
+    animation-duration: 2s;
+}
+.jianzhi2_x{
+    position: absolute;
+    top: -3vh;
+    right: -5vw;
+    width: 40vw;
+    animation-duration: 2s;
+}
+.jianzhi2_x img{
+    transform: scale(1,-1);
+}
+.fish{
+    position: absolute;
+    top: 19vh;
+    left: 6vw;
+    width: 24vw;
+}
+.fishMove{
+    animation: fishMove 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes fishMove {
+    0%{left:6vw}
+    100%{left: 9vw}
+}
+.fish2{
+    position: absolute;
+    top: 40vh;
+    right: 15vw;
+    width: 17vw;
+}
+.fish2Move{
+    animation: fish2Move 2s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes fish2Move {
+    0%{top:40vh;right: 15vw}
+    50%{top:38vh;right: 14vw}
+    100%{top:42vh;right: 16vw}
+}
+.hua{
+    position: absolute;
+    bottom: 24vw;
+    right: 0;
+    width: 42vw;
+    animation-duration: 2s;
+}
+.huaMove{
+    animation: huaMove 2s linear 0s infinite alternate;
+    transform-origin: 50% 100%;
+}
+@keyframes huaMove {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(-11deg)
+    }
+}
+.jianzhi6{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    animation-duration: 2s;
+}
+.xinzhi{
+    position: absolute;
+    top:30vh;
+    left:10vw;
+    width:80vw;
+    height: 60vh;
+    background: url("../img/kuang2.png") no-repeat;
+    background-size: 100%;
 }
